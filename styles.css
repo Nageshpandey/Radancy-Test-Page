@@ -1,0 +1,466 @@
+:root {
+    --primary-color: #00955e;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 31px;
+    color: #888888;
+    background-color: #ffffff;
+}
+
+
+.header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+    height: 10vh; /* Fixed header height */
+}
+
+.logo {
+    height:5vh;
+    object-fit: contain;
+}
+
+.main-content {
+    position: relative;
+    height: 70vh; /* Half of the viewport height */
+    overflow: hidden; /* Ensures no content overflows */
+}
+
+.background-image {
+    position: absolute;
+    top: 98%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    height: auto;
+}
+
+.green-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%; /* Adjust width of the green overlay */
+    height: 100%;
+    background-color: #307868; /* Green color */
+    opacity: 84%;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+}
+
+h2, h3 {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    transition: all ease 500ms;
+}
+
+section {
+    padding: 0 18px;
+}
+
+.sec-title {
+    position: relative;
+    padding-bottom: 32px;
+    letter-spacing: -1px;
+}
+
+.sec-title::after {
+    content: '';
+    width: 75px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    text-align: center;
+    padding: 24px 18px;
+}
+
+header > h1, 
+header > h1 .navbar-brand {
+    line-height: 20px;
+}
+
+header .navbar-brand {
+    display: inline-block;
+}
+
+header .navbar-brand img {
+    max-width: 100%;
+    height: 20px;
+}
+
+/* hero-banner */
+
+.hero-banner {
+    padding: 0;
+    line-height: 0;
+}
+
+.hero-banner > picture {
+    display: inline-block;
+    width: 100%;
+}
+
+.hero-banner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* search-jobs */
+.search-jobs {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.search-jobs .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.search-jobs .btn {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 20px;
+    color: #fff;
+    background: #e97300;
+    border: 1px solid #e97300;
+    padding: 10px 20px;
+}
+
+.search-jobs .btn:hover {
+    background-color: #fff;
+    color: #e97300;
+}
+
+/* citizen-advantages */
+.citizen-advantages .advantage-wrapper {
+    padding-top: 8px;
+}
+
+.advantage-wrapper .advantage-item {
+    border-top: 1px solid #c2c2c2;
+    padding-top: 20px;
+    margin-bottom: 26px;
+}
+
+.advantage-wrapper .advantage-item:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.advantage-wrapper .advantage-item .advantage-title {
+    padding-bottom: 18px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.advantage-wrapper .advantage-item .item-link {
+    display: inline-block;
+    color: #759b24;
+}
+
+.advantage-wrapper .advantage-item .item-link .icon-chevron {
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    transition: all ease 500ms;
+}
+
+.advantage-wrapper .advantage-item .item-link .icon-chevron::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #759b24;
+    border-right: 2px solid #759b24;
+    transform: rotate(45deg);
+}
+
+.advantage-wrapper .advantage-item .item-link:hover .icon-chevron {
+    transform: translateX(10px);
+}
+
+/* home-loan */
+.home-loan {
+    padding-top: 10px;
+}
+
+.home-loan .sec-title {
+    font-size: 22px;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 20px 22px;
+}
+
+.home-loan .sec-title::after {
+    display: none;
+}
+
+.home-loan .home-loan-info {
+    background: #ebf7f5;
+    padding: 20px 12px 15px;
+}
+
+/* testimonials */
+.quotes-wrapper {
+    padding-bottom: 70px;
+}
+
+.quotes-wrapper .quote-item {
+    text-align: center;
+    line-height: 1;
+    padding: 32px 0 0;    
+}
+
+.quotes-wrapper .quote-item .quote-item-avatar {
+    max-width: 100%;
+    height: auto;    
+}
+
+.quotes-wrapper .quote-item .quote-item-text {
+    color: #666666;
+    line-height: 28px;
+    max-width: 70%;
+    margin: 12px auto 24px;
+    position: relative;    
+}
+
+.quotes-wrapper .quote-item .quote-item-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('./assets/quote.png') no-repeat;
+    background-position: top left;
+    z-index: -1;
+}
+
+.quotes-wrapper .quote-item .quote-item-author {
+    max-width: 55%;
+    color: rgba(0, 158, 119, 84%);
+    line-height: 28px;
+    letter-spacing: -1px;
+    margin: 0 auto ;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid var(--primary-color);
+    padding: 26px 18px 32px;
+}
+
+footer .social-items-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .social-items-wrapper .social-item {
+    display: inline-flex;
+}
+
+footer .social-items-wrapper .social-item:hover {
+    transform: translateY(-8px);
+}
+
+footer .social-items-wrapper .social-item .social-item-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url('./assets/social-icons.png') no-repeat;
+}
+
+footer .social-items-wrapper .social-item .social-item-icon.social-item-icon--facebook {
+    background-position: 0 0;
+}
+
+footer .social-items-wrapper .social-item .social-item-icon.social-item-icon--twitter {
+    background-position: -36px 0;
+}
+
+footer .social-items-wrapper .social-item .social-item-icon.social-item-icon--linkedin {
+    background-position: -72px 0;
+}
+
+footer .social-items-wrapper .social-item .social-item-icon.social-item-icon--youtube {
+    background-position: -110px 0;
+}
+
+footer .privacy-info {
+    font-size: 11px;
+    color: #666666;
+    line-height: 1.5;
+    padding: 25px 0;
+}
+
+footer .privacy-info a {
+    color: #666666;
+    text-decoration: underline;
+}
+
+footer .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;    
+}
+
+footer .footer-links a {
+    display: inline-block;
+    font-size: 12px;  
+    color: #000000;
+    line-height: 16px;
+    border-left: 1px solid #000;
+    padding-left: 8px;
+}
+
+footer .privacy-info a:hover,
+footer .footer-links a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer .footer-links a:first-of-type {
+    border: 0;
+    padding: 0;
+}
+
+/* desktop - 1024 */
+@media only screen and (min-width:1024px) {
+
+    section {
+        padding: 0 36px;
+    }
+
+    .sec-title {
+        padding-bottom: 46px;
+    }
+
+    .sec-title::after {
+        bottom: 26px;
+    }
+    
+    /* header */
+    header {
+        text-align: left;
+        padding: 64px 36px 52px;
+    }
+
+    header > h1,
+    header > h1 .navbar-brand {
+        line-height: 35px;
+    }
+
+    header .navbar-brand img {
+        height: 35px;
+    }
+
+    /* search-jobs */
+    .search-jobs {
+        padding-top: 64px;
+        padding-bottom: 44px;
+    }
+
+    .search-jobs .btn-wrapper {
+        padding-top: 45px;
+    }
+
+    /* citizen-advantages */
+    .citizen-advantages .advantage-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 86px;
+        padding-top: 14px;
+    }
+
+    .advantage-wrapper .advantage-item {
+        max-width: 50%;
+        flex: 0 0 50%;
+        border-top: 0;
+        padding-top: 0;
+        padding-right: 24px;
+    }
+
+    .advantage-wrapper .advantage-item.bordered--lg {
+        border-left: 1px solid #c2c2c2;
+        padding-left: 36px;
+    }
+
+    /* home-loan */
+    .home-loan {
+        padding-top: 36px;
+    }
+
+    .home-loan .home-loan-info {
+        padding: 30px 64px 36px;
+    }
+
+    /* testimonials */
+    .quotes-wrapper {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        padding-bottom: 136px;
+    }
+
+    .quotes-wrapper .quote-item {
+        padding: 60px 0 0;
+    }
+
+    .quotes-wrapper .quote-item.quote-item--sm {
+        max-width: 25%;
+        flex: 0 0 25%;
+    }
+
+    .quotes-wrapper .quote-item.quote-item--lg {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .quotes-wrapper .quote-item .quote-item-text {
+        margin: 14px auto 24px;
+    }
+
+    /* footer */
+    footer {
+        padding: 37px 36px 40px;
+    }
+}
+
