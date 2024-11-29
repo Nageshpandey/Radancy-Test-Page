@@ -295,6 +295,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-top: 10px;
 }
 
 .social-items-wrapper .social-item {
